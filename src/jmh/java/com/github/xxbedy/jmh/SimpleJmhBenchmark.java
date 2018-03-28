@@ -26,4 +26,11 @@ public class SimpleJmhBenchmark {
     	bh.consume(concat);
     }
 
+    @Benchmark
+    public void stringbuilder(Blackhole bh) {
+    	StringBuilder sb = new StringBuilder("foo");
+    	sb.append("bar");
+    	bh.consume(sb.toString());
+    }
+
 }
