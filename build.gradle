@@ -47,3 +47,11 @@ jmh {
     iterations = 5
     warmupIterations = 5
 }
+
+// report jmh results after benchmark
+tasks.jmh.finalizedBy tasks.jmhReport
+
+jmhReport {
+    jmhResultPath = project.file("${project.buildDir}/reports/jmh/results.json")
+    jmhReportOutput = project.file("${project.buildDir}/reports/jmh")
+}
