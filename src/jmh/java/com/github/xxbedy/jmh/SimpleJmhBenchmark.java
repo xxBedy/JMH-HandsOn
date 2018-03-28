@@ -18,4 +18,12 @@ public class SimpleJmhBenchmark {
     	String concat = foo + bar;
     }
 
+    @Benchmark
+    public void stringConcatWithBlackhole(Blackhole bh) {
+    	String foo = "foo";
+    	String bar = "bar";
+    	String concat = foo + bar;
+    	bh.consume(concat);
+    }
+
 }
