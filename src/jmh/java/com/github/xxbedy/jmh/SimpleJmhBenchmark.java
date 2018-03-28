@@ -5,8 +5,11 @@ import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.infra.Blackhole;
 
-@State(Scope.Benchmark)
 public class SimpleJmhBenchmark {
+
+    @Benchmark
+    public void baseLine() {
+	}
 
     @Benchmark
     public void stringConcat() {
