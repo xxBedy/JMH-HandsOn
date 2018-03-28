@@ -33,4 +33,8 @@ public class SimpleJmhBenchmark {
     	bh.consume(sb.toString());
     }
 
+    @Benchmark
+    public void stringBuilderFlowAPI(Blackhole bh) {
+    	bh.consume(new StringBuilder("foo").append("bar").toString());
+    }
 }
