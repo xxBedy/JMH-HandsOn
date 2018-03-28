@@ -27,7 +27,7 @@ public class SimpleJmhBenchmark {
     }
 
     @Benchmark
-    public void stringbuilder(Blackhole bh) {
+    public void stringBuilder(Blackhole bh) {
     	StringBuilder sb = new StringBuilder("foo");
     	sb.append("bar");
     	bh.consume(sb.toString());
